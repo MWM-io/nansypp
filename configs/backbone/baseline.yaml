@@ -1,0 +1,16 @@
+defaults:
+  - nansypp_config
+  - datamodule: base
+  - profiler: disabled
+  - generator_loss/pitch_prediction_loss: pitch_supervision_loss
+  - generator/information_perturbator: nansypp_information_perturbator
+  - generator/linguistic_encoder/wav2vec2: nansypp-wav2vec2
+  - _self_
+
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: static/runs/${run_dir_base}/${experiment}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep: # for multirun
+    dir: ${hydra.run.dir}

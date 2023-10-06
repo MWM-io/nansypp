@@ -1,0 +1,19 @@
+defaults:
+  - baseline
+  - train_dataset: hifitts
+  - _self_
+
+experiment: hifitts
+
+run_dir_base: RUNS_BACKBONE
+
+datamodule:
+  val_split: 0.01
+  val_seed: 42
+
+model:
+  gradient_clip_val: 10
+  gradient_clip_algorithm: norm
+
+trainer:
+  val_check_interval: 50000
