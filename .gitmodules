@@ -1,0 +1,3 @@
+[submodule "glow-tts"]
+	path = glow-tts
+	url = https://github.com/KaluginD/glow-tts

@@ -1,0 +1,26 @@
+defaults:
+  - baseline
+  - _self_
+
+run_dir_base: RUNS_TTS
+data_path: <tts_targets_dir>/
+
+datamodule:
+  train_dataset:
+    descriptor_file: train_dataset.csv
+    alignment_file: <alignment_dir>/dataset.csv
+    sample_rate: 44100
+  val_dataset:
+    dataset_dir: <tts_targets_dir>/
+    descriptor_file: validation_dataset.csv
+    alignment_file: <alignment_dir>/dataset.csv
+    sample_rate: 44100
+
+trainer:
+  gradient_clip_val: 1
+  gradient_clip_algorithm: value
+
+model_checkpoint:
+  every_n_train_steps: 1000
+
+experiment: test

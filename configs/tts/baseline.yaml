@@ -1,0 +1,12 @@
+defaults:
+  - nansy_tts_config
+  - datamodule: base
+  - _self_
+
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: static/runs/${run_dir_base}/${experiment}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: ${hydra.run.dir}
