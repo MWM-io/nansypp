@@ -4,8 +4,10 @@ Unofficial implementation of paper ["NANSY++: Unified Voice Synthesis with Neura
 
 We focus on 2 subtasks:
 
-- voice conversion: [documentation](./doc/BACKBONE_DOCUMENTATION.md)
-- text-to-speech: [documentation](./doc/TTS_DOCUMENTATION.md)
+- voice conversion: [documentation](./doc/BACKBONE_DOCUMENTATION.md), [R&D observations](./doc/BACKBONE_OBSERVATIONS.md)
+- text-to-speech: [documentation](./doc/TTS_DOCUMENTATION.md), [R&D obeservations](./doc/TTS_OBSERVATIONS.md)
+
+We also provide pretrained checkpoints for both models (please refer to the documentation), and compare our results with those reported in the article on [this Notion page](https://swamp-galliform-240.notion.site/Demo-page-for-NANSY-open-source-repo-b38c9ed2722140bf94c3af454e541d37).
 
 ## ⚙️ Setup
 
